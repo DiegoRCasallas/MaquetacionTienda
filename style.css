@@ -1,0 +1,16 @@
+
+
+:root {
+
+    --white: #ffffff;
+    --black: #000000;
+    --very-light-ocre: #eed7af;
+    --text-input-field: #F7f7f7;
+    --hospital-blue:#619eae;
+    
+    /*Variables medidas texto*/
+    --sm:14px;
+    --md:16px;
+    --lg:18px;
+
+}
