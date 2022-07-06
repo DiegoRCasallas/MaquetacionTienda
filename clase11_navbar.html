@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar-desktop</title>
+
+    <style>
+        /* nuestras variables */
+        :root {
+
+            --white: #ffffff;
+            --black: #000000;
+            --very-light-ocre: #eed7af;
+            --text-input-field: #F7f7f7;
+            --hospital-blue: #619eae;
+
+            /*Variables medidas texto*/
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+
+            --font: 'Quicksand';
+
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--font);
+        }
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Estructuramos el navbar -->
+    <nav class="navbar">
+
+        <img src="./icons/icon_menu.svg"><!--Esconderemos esta imagen en desktop-->
+
+        <!--el navbar estará dividido den dos secciones-->
+        <div class="navbar-left">
+            <img src="/logos/logo-med.png" alt="logo" class="logo">
+            <ul>
+                <li><a href="/">All</a></li>
+                 <li><a href="/">Clothes</a></li>
+                 <li><a href="/">Electronics</a></li>
+                 <li><a href="/">Furniture</a></li>
+                 <li><a href="/">Toys</a></li>
+                 <li><a href="/">Other</a></li>
+            </ul>
+
+        </div>
+
+        <div class="navbar-rigth">
+          <li>diegor@homtail.com</li>
+          <li class="navbar-shoping-cart">
+            <img src="icons/icon_shopping_cart.svg" alt ="shoping cart">
+          </li>
+          <div>2</div>
+
+        </div>
+    </nav>
+
+</body>
+
+</html>
