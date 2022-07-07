@@ -30,6 +30,104 @@
             margin: 0;
             font-family: var(--font);
         }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding-left: 0 24px;
+            
+        }
+
+        .menu {
+            display: none;
+            /*desaparece img menu en desktop*/
+        }
+
+        .logo {
+            width: 100px;
+
+        }
+
+
+        .navbar-left {
+            display: flex;
+            align-items: center;
+
+
+        }
+
+        .navbar-rigth {
+            display: flex;
+            align-items: center;
+            margin: 0;
+
+
+        }
+
+
+        .navbar-left ul,
+        .navbar-rigth ul {
+            padding: 0;
+            margin: 0px;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            height: 60px;
+
+        }
+
+        .navbar-left ul li a,
+        .navbar-rigth ul li a {
+            color: var(--very-light-ocre);
+            padding: 8px;
+            margin-left: 8px;
+            text-decoration: none;
+            border-radius: 12px;
+            border: 1px solid var(--white);
+
+        }
+
+        .navbar-left ul li a:hover,
+        .navbar-rigth ul li a:hover {
+
+            padding: 8px;
+            margin-left: 8px;
+
+            border: 1px solid var(--hospital-blue);
+            border-radius: 12px;
+            color: var(--hospital-blue)
+        }
+
+        .navbar-left ul {
+            margin-left: 12px;
+        }
+
+        /*Estilizamos especificamente nav derecho*/
+        .navbar-email {
+            color: var(--very-light-ocre);
+            font-size: var(--sm);
+        }
+
+        .navbar-shoping-cart div {
+            width: 12px;
+            height: 12px;
+            background-color: var(--hospital-blue);
+            border-radius: 50%;
+            font-size:10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            /*ajustamos la bolita enel carrito de compras*/
+            position: absolute;
+            top:0px;
+            right: 0px;
+        }
+        .navbar-shoping-cart{
+            position: relative;
+        }
+        
     </style>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,29 +139,31 @@
 <body>
     <!-- Estructuramos el navbar -->
     <nav class="navbar">
-
-        <img src="./icons/icon_menu.svg"><!--Esconderemos esta imagen en desktop-->
+        <!--Esconderemos esta imagen en desktop-->
+        <img src="./icons/icon_menu.svg" class="menu">
 
         <!--el navbar estará dividido den dos secciones-->
         <div class="navbar-left">
             <img src="/logos/logo-med.png" alt="logo" class="logo">
             <ul>
                 <li><a href="/">All</a></li>
-                 <li><a href="/">Clothes</a></li>
-                 <li><a href="/">Electronics</a></li>
-                 <li><a href="/">Furniture</a></li>
-                 <li><a href="/">Toys</a></li>
-                 <li><a href="/">Other</a></li>
+                <li><a href="/">Clothes</a></li>
+                <li><a href="/">Electronics</a></li>
+                <li><a href="/">Furniture</a></li>
+                <li><a href="/">Toys</a></li>
+                <li><a href="/">Other</a></li>
             </ul>
 
         </div>
 
         <div class="navbar-rigth">
-          <li>diegor@homtail.com</li>
-          <li class="navbar-shoping-cart">
-            <img src="icons/icon_shopping_cart.svg" alt ="shoping cart">
-          </li>
-          <div>2</div>
+            <ul>
+                <li class="navbar-email">diegor@homtail.com</li>
+                <li class="navbar-shoping-cart">
+                    <img src="icons/icon_shopping_cart.svg" alt="shoping cart">
+                    <div>2</div>
+                </li>
+            </ul>
 
         </div>
     </nav>
