@@ -36,6 +36,7 @@
             justify-content: space-between;
             width: 100%;
             padding-left: 0 24px;
+            border-bottom: 1px solid var(--very-light-ocre);
             
         }
 
@@ -126,6 +127,22 @@
         }
         .navbar-shoping-cart{
             position: relative;
+        }
+
+        /*MEDIAQUERIES*/
+        @media(max-width:640px){
+            .menu{
+                /*aparecerala imagen del menu*/
+                display:block;
+            }
+            /*Desaparecemos el navbar-lef*/
+            .navbar-left ul{
+                display: none;
+            }
+            /*Desaparecemos el email*/
+            .navbar-email{
+                display: none;
+            }
         }
         
     </style>
