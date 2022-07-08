@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* nuestras variables */
+        :root {
+
+            --white: #ffffff;
+            --black: #000000;
+            --very-light-ocre: #eed7af;
+            --text-input-field: #F7f7f7;
+            --hospital-blue: #619eae;
+
+            /*Variables medidas texto*/
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+
+            --font: 'Quicksand';
+
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--font);
+        }
+
+        .primary-button {
+            background-color: var(--hospital-blue);
+            border-radius: 8px;
+            border: none;
+            color: var(--white);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+            /*para que la imagen del carrito quede en horizontal con el contenido*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .image-car {
+            height: 90%;
+            margin-right: 12px;
+        }
+
+
+        .product-detail-close {
+            width: 14px;
+            height: 14px;
+            position: absolute;
+            background-color: var(--white);
+            padding: 12px;
+            border-radius: 50%;
+            border: 1px solid var(--text-input-field);
+            z-index: 2;
+            left: 24px;
+            top: 24px;
+        }
+        .product-detail-close:hover {
+            width: 14px;
+            height: 14px;
+            position: absolute;
+            background-color: var(--hospital-blue);
+            padding: 12px;
+            border-radius: 50%;
+            border: 1px solid var(--text-input-field);
+            z-index: 2;
+            left: 24px;
+            top: 24px;
+        }
+
+        .product-detail-close:hover {
+            /*para que aparezca la manito sobre él*/
+            cursor: pointer;
+        }
+
+        .product-detail-close img {
+            /*para que quede encima de la imagen */
+            position: absolute;
+            /*ajustamos la imagen en el centro del contenedor*/
+            margin: auto;
+        }
+
+        .product-detail {
+            position: absolute;
+            right: 0;
+            /*Ancho del contenedor principal*/
+            width: 360px;
+            
+        }
+
+        .product-detail > img:nth-child(2) {
+            width: 100%;
+            height: 360px;
+        
+            border-radius: 0 0 24px 24px;
+            /*ndica cómo el contenido de un elemento, debería redimensionarse para ajustarse a su contenedor. */
+            object-fit: cover;
+            
+        }
+
+        .product-info {
+            
+            padding:20px;
+           
+            font-size: var(--sm);
+            color: var(--very-light-ocre);
+            padding-top: 12px;
+        }
+        .product-info p:nth-child(1){
+            font-size: var(--lg);
+            color:var(--black);
+            font-weight: bold;
+            margin:0;
+        }
+        .product-info p:nth-child(2){
+            font-size: var(--sm);
+           margin-top:4px;
+            font-weight: bold;
+        }
+        .product-info p:nth-child(3){
+            font-size: var(--sm);
+            margin-top: 20px;
+            text-align:justify;
+        }
+
+        /*mediaqueries*/
+        @media(max-width:640px){
+            .product-detail{
+                width: 100%;
+            }
+
+        }
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <aside class="product-detail">
+        <div class="product-detail-close">
+            <img src="./icons/icon_close.png" alt="close">
+        </div>
+        <img src="https://bicicletasstrongman.co/wp-content/uploads/2022/06/willier-cento-10-ultegra.jpg"
+            alt="Bicicleta">
+        <div class="product-info">
+            <p>$35,00</p>
+            <p>Bicicleta de ruta</p>
+            <p>El modelo ANGLIRU forma parte de la gama
+                de monocasco de carbono. El cuadro es asimétrico
+                y con cableado interno. Se trata del
+                primer cuadro de la gama, pensado para un
+                cicloturista que busca la comodidado
+                Es una bicicleta con la combinación
+                perfecta entre confort y rendimiento. Posee el cabezal más alto para una posición más erguida y más
+                cómoda. El carro trasero posee tirantes CRS (Century Ride), más delgados y curvos para una mayor
+                capacidad de absorción de los baches, sin afectar en la rigidez lateral del cuadro.
+            </p>
+            <button class="primary-button">
+                <!--imagen de carritod e compras dentro del boyon-->
+                <img src="./icons/add-to-car3.png" class="image-car" alt="add to cart">
+                add to cart
+            </button>
+        </div>
+
+    </aside>
+
+</body>
+
+</html>
